@@ -1,0 +1,92 @@
+/* ===== Website Stylesheets ================================================ */
+
+.main {
+    /* Display and Box Model */
+    padding: 25px;
+}
+
+/* ===== Info Area Styling ================================================== */
+
+.jumbotron {
+    /* Display and box model */
+    border-radius: 10px;
+    padding: 25px;
+    /* Color */
+    background-image: linear-gradient(to bottom right, orchid, thistle);
+    color: white;
+    /* Text */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jumbotron h1 {
+    /* Text */
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+
+.jumbotron p {
+    /* Text */
+    font-size: 1.25rem;
+}
+
+.buttonInfoArea {
+    /* Display and Box Model */
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+    width: 100px;
+    /* Color */
+    background-color: transparent;
+    border: 2px solid white;
+    border-color: white;
+    color: white;
+    /* Text */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    /* Other */
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.buttonInfoArea:hover {
+    /* Color */
+    background-color: white;
+    color: orchid;
+}
+
+.buttonInfoArea span {
+    /* Position */
+    position: relative;
+    /* Display and Box Model */
+    display: inline-block;
+    /* Other */
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.buttonInfoArea span:after {
+    /* Position */
+    position: absolute;
+    right: -20px;
+    top: 0;
+    /* Display and Box Model */
+    opacity: 0;
+    /* Text */
+    content: "\00bb";
+    /* Other */
+    transition: 0.5s;
+}
+
+.buttonInfoArea:hover span {
+    /* Display and Box Model */
+    padding-right: 25px;
+}
+
+.buttonInfoArea:hover span:after {
+    /* Position */
+    right: 0;
+    /* Display and Box Model */
+    opacity: 1;
+}

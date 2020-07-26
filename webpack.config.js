@@ -4,7 +4,6 @@ module.exports = (env) => {
         entry: "./index.js",
         output: {
             filename: "bundle.js",
-            path: "/",
         },
         module: {
             rules: [
