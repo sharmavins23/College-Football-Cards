@@ -1,5 +1,8 @@
 # College Football Cards
 
+This is a small website project designed to practice website development in
+React.
+
 # License TL;DR
 
 This project is distributed under the MIT license. This is a paraphrasing of a
