@@ -3,6 +3,8 @@
 .main {
     /* Display and Box Model */
     padding: 10px;
+    /* Text */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .button {
@@ -57,31 +59,37 @@
     opacity: 1;
 }
 
-/* ===== Info Area Styling ================================================== */
-
-.jumbotron {
+.area {
     /* Display and box model */
     border-radius: 10px;
     padding: 25px;
-    /* Color */
-    background-image: linear-gradient(to bottom right, orchid, thistle);
-    color: white;
-    /* Text */
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-.jumbotron h1 {
+.area h1 {
     /* Text */
     font-size: 4rem;
     margin-bottom: 5px;
 }
 
-.jumbotron p {
+.area h2 {
+    /* Text */
+    font-size: 2rem;
+}
+
+.area p {
     /* Text */
     font-size: 1.25rem;
 }
 
-.buttonInfoArea {
+/* ===== Info Area Styling ================================================== */
+
+.area_info {
+    /* Color */
+    background-image: linear-gradient(to bottom right, orchid, thistle);
+    color: white;
+}
+
+.button_info {
     /* Display and Box Model */
     width: 100px;
     /* Color */
@@ -90,8 +98,16 @@
     color: white;
 }
 
-.buttonInfoArea:hover {
+.button_info:hover {
     /* Color */
     background-color: white;
     color: orchid;
 }
+
+/* ===== Entry Area Styling ================================================= */
+
+.area_entry {
+    background-color: lightgray;
+}
+
+/* ===== Card Area Styling ================================================== */
