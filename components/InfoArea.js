@@ -2,9 +2,9 @@ import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import styles from "../stylesheet.module.css";
 
-function InfoArea(props) {
+function InfoArea() {
     return (
-        <div>
+        <div class={styles.main}>
             <Jumbotron bsPrefix={styles.jumbotron}>
                 <h1>College Football Cards</h1>
                 <p>
@@ -14,7 +14,8 @@ function InfoArea(props) {
                 </p>
                 <p>
                     <a href="https://github.com/sharmavins23">
-                        <button class={styles.buttonInfoArea}>
+                        <button
+                            class={styles.button + " " + styles.buttonInfoArea}>
                             <span>More </span>
                         </button>
                     </a>
