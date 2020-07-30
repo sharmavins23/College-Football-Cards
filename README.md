@@ -3,6 +3,15 @@
 This is a small website project designed to practice website development in
 React.
 
+## Overview
+
+The project scrapes information from the
+[College Football Data API](https://api.collegefootballdata.com/api/docs/?url=/api-docs.json).
+A user selects a college football conference from a dropdown, and the choice
+goes towards forming a request to the application API. The resulting teams
+information is parsed into components which are displayed as cards in the area
+underneath the request box.
+
 # License TL;DR
 
 This project is distributed under the MIT license. This is a paraphrasing of a
@@ -11,11 +20,6 @@ This project is distributed under the MIT license. This is a paraphrasing of a
 This license is a short, permissive software license. Basically, you can do
 whatever you want with this software, as long as you include the original
 copyright and license notice in any copy of this software/source.
-
-This project is a curriculum-based project. I do NOT condone any re-use of this
-code or intellectual property that results in academic integrity violations.
-Furthermore, I am not responsible for any re-use of this code that creates any
-academic integrity violations.
 
 ## What you CAN do:
 
