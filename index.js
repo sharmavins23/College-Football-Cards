@@ -9,8 +9,6 @@ function App() {
     return (
         <div class={styles.main}>
             <InfoArea />
-            <InfoArea />
-            <InfoArea />
         </div>
     );
 }
