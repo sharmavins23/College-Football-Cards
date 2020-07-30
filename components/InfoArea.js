@@ -3,7 +3,7 @@ import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import styles from "../stylesheet.module.css";
 
-// Info area container - topmost section of the application.
+// Info area container - topmost section of application
 function InfoArea() {
     // Contains a simple overview of the project, as well as button links to this
     // project's source code, and other GitHub repositories.
@@ -32,4 +32,5 @@ function InfoArea() {
     );
 }
 
+// Module export
 export default InfoArea;
