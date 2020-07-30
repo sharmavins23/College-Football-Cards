@@ -9,6 +9,9 @@ import CardArea from "./components/CardArea";
 
 // Main container
 function App() {
+    // Contains all individual components
+
+    // Render
     return (
         <div class={styles.main}>
             <InfoArea />

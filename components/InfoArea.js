@@ -1,15 +1,16 @@
 // Imports
 import React from "react";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import styles from "../stylesheet.module.css";
 
 // Info area container - topmost section of application
 function InfoArea() {
     // Contains a simple overview of the project, as well as button links to this
-    // project's source code, and other GitHub repositories.
+    // project's source code, and other GitHub repositories
+
+    // Render
     return (
         <div class={styles.main}>
-            <Jumbotron bsPrefix={styles.jumbotron}>
+            <div class={styles.area + " " + styles.area_info}>
                 <h1>College Football Cards</h1>
                 <p>
                     This is a small website that scrapes college football APIs
@@ -22,12 +23,12 @@ function InfoArea() {
                 <p>
                     <a href="https://github.com/sharmavins23/College-Football-Cards">
                         <button
-                            class={styles.button + " " + styles.buttonInfoArea}>
+                            class={styles.button + " " + styles.button_info}>
                             <span>Code </span>
                         </button>
                     </a>
                 </p>
-            </Jumbotron>
+            </div>
         </div>
     );
 }
