@@ -5,12 +5,13 @@ import ReactDOM from "react-dom";
 import InfoArea from "./components/InfoArea";
 import EntryArea from "./components/EntryArea";
 import CardArea from "./components/CardArea";
+// Styles
+import "bootstrap/dist/css/bootstrap.css";
 
 // Main container
 function App() {
     // Contains all individual components
 
-    // Saving variable to passthrough (without re-render)
     // States
     const [value, setValue] = useState("");
 
@@ -24,7 +25,7 @@ function App() {
         <div>
             <InfoArea />
             <EntryArea parentCallback={handleChange} />
-            <CardArea />
+            <CardArea value={value} />
         </div>
     );
 }

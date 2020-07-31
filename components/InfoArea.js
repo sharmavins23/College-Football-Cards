@@ -4,8 +4,8 @@ import { Button, Typography } from "antd";
 const { Title, Text } = Typography;
 import { GithubOutlined } from "@ant-design/icons";
 // Styles
-import {} from "antd/dist/antd.css";
 import styles from "../stylesheet.module.css";
+import {} from "antd/dist/antd.css";
 
 // Info area container - topmost section of application
 function InfoArea() {
@@ -40,7 +40,6 @@ function InfoArea() {
 
                 {/* Source Code Button */}
                 <Button
-                    icon={<GithubOutlined />}
                     href="https://github.com/sharmavins23/College-Football-Cards/"
                     shape="round"
                     type="primary">
