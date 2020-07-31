@@ -11,12 +11,20 @@ import CardArea from "./components/CardArea";
 function App() {
     // Contains all individual components
 
+    // States
+    const [data, setData] = useState([]);
+
+    // Callback function to change and save data state from child EntryArea
+    let callback = (data) => {
+        setData(data);
+    };
+
     // Render
     return (
         <div>
             <InfoArea />
-            <EntryArea />
-            <CardArea />
+            <EntryArea parentCallback={this.callback} />
+            <CardArea data={this.state.data} />
         </div>
     );
 }

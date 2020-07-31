@@ -1,12 +1,12 @@
 // Imports
 import React, { useState, useEffect } from "react";
-import { Typography, Select } from "antd";
+import { Typography, Divider, Select } from "antd";
 const { Title, Text } = Typography;
 const { Option } = Select;
 import styles from "../stylesheet.module.css";
 
 // Entry area container - middle section of application
-function EntryArea() {
+function EntryArea(props) {
     // Contains the area box for the user to select the conference they wish to load,
     // as well as the request call to the API to initially load up and populate the
     // selection box
@@ -25,7 +25,7 @@ function EntryArea() {
         })
             .then((response) => response.json()) // Convert to JSON
             .then((response) => {
-                // Replace object key names
+                // Sanitize object key names
                 return response.map((obj) => {
                     return {
                         key: obj.id,
@@ -36,44 +36,60 @@ function EntryArea() {
                 });
             })
             .then((response) => {
-                setData(response);
+                setData(response); // Save our data in the state
+                props.parentCallback(response); // Pass our data back to the parent
                 setIsLoading(false);
             })
-            .catch((error) => console.log(error));
+            .catch((error) => console.log(error)); // Error handling
     }, []);
 
     // Render
     return (
-        <div>
-            {/* Left Div */}
-            <div>
-                {/* Title */}
-                <Title level={3}>Enter a football conference.</Title>
-                <Text>
-                    Select from the dropdown one of the supported College
-                    Football conferences.
-                </Text>
-            </div>
+        <div class={styles.entryArea}>
+            <table class={styles.entryAreaTable}>
+                <tr>
+                    {/* Left side */}
+                    <td
+                        class={
+                            styles.entryAreaTable_left +
+                            " " +
+                            styles.entryAreaTable_cell
+                        }>
+                        {/* Title */}
+                        <Title level={3}>Enter a football conference.</Title>
+                        <Text>
+                            Select from the dropdown one of the supported
+                            College Football conferences.
+                        </Text>
+                        <br />
+                        <Text>
+                            Once you select one, all football teams making up
+                            that conference will be displayed beneath in cards.
+                        </Text>
+                    </td>
 
-            {/* Right Div */}
-            <div>
-                <Select
-                    filterOption={(input, option) =>
-                        option.children
-                            .toLowerCase()
-                            .indexOf(input.toLowerCase()) >= 0
-                    }
-                    placeholder="Choose conference"
-                    size="large"
-                    showSearch
-                    optionFilterProp="children"
-                    loading={isLoading}
-                    style={{ width: 400 }}>
-                    {data.map((obj) => (
-                        <Option value={obj.value}>{obj.text}</Option>
-                    ))}
-                </Select>
-            </div>
+                    {/* Right side */}
+                    <td class={styles.entryAreaTable_cell}>
+                        <Select
+                            filterOption={(input, option) =>
+                                option.children
+                                    .toLowerCase()
+                                    .indexOf(input.toLowerCase()) >= 0
+                            }
+                            loading={isLoading}
+                            optionFilterProp="children"
+                            placeholder="Choose conference"
+                            showSearch
+                            size="large"
+                            style={{ width: 200 }}>
+                            {data.map((obj) => (
+                                <Option value={obj.value}>{obj.text}</Option>
+                            ))}
+                        </Select>
+                    </td>
+                </tr>
+            </table>
+            <Divider />
         </div>
     );
 }

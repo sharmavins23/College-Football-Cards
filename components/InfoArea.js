@@ -40,10 +40,10 @@ function InfoArea() {
 
                 {/* Source Code Button */}
                 <Button
-                    href="https://github.com/sharmavins23/College-Football-Cards/"
-                    type="primary"
                     icon={<GithubOutlined />}
-                    shape="round">
+                    href="https://github.com/sharmavins23/College-Football-Cards/"
+                    shape="round"
+                    type="primary">
                     Code
                 </Button>
             </div>

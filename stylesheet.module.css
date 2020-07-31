@@ -7,6 +7,8 @@
 
 /* ===== Website Stylesheets ================================================ */
 
+/* ===== Info Area Styling ================================================== */
+
 .infoArea {
     /* Display and Box Model */
     margin: 0 auto;
@@ -29,6 +31,28 @@
     background-size: cover;
 }
 
-/* ===== Info Area Styling ================================================== */
 /* ===== Entry Area Styling ================================================= */
+
+.entryArea {
+    /* Display and Box Model */
+    padding: 25px;
+}
+
+.entryAreaTable {
+    /* Display and Box Model */
+    width: 100%;
+    /* Other */
+    table-layout: fixed;
+}
+
+.entryAreaTable_cell {
+    /* Display and Box Model */
+    padding: 10px;
+}
+
+.entryAreaTable_left {
+    /* Text */
+    text-align: right;
+}
+
 /* ===== Card Area Styling ================================================== */
