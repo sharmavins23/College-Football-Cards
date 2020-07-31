@@ -6,7 +6,7 @@ const { Option } = Select;
 import styles from "../stylesheet.module.css";
 
 // Entry area container - middle section of application
-function EntryArea() {
+function EntryArea({ parentCallback }) {
     // Contains the area box for the user to select the conference they wish to load,
     // as well as the request call to the API to initially load up and populate the
     // selection box
@@ -37,11 +37,15 @@ function EntryArea() {
             })
             .then((response) => {
                 setData(response); // Save our data in the state
-                //this.props.parentCallback(response); // Pass our data back to the parent
                 setIsLoading(false);
             })
             .catch((error) => console.log(error)); // Error handling
     }, []);
+
+    // Uses callback function to send out our selected variable
+    function handleSelect(value) {
+        parentCallback(value);
+    }
 
     // Render
     return (
@@ -77,6 +81,7 @@ function EntryArea() {
                                     .indexOf(input.toLowerCase()) >= 0
                             }
                             loading={isLoading}
+                            onSelect={handleSelect}
                             optionFilterProp="children"
                             placeholder="Choose conference"
                             showSearch

@@ -11,19 +11,19 @@ function App() {
     // Contains all individual components
 
     // Saving variable to passthrough (without re-render)
-    let choiceVal = "";
+    // States
+    const [value, setValue] = useState("");
 
     // Callback function to change and save data state from child EntryArea
-    let callback = (data) => {
-        //setData(data);
-        choiceVal = data;
-    };
+    function handleChange(value) {
+        setValue(value);
+    }
 
     // Render
     return (
         <div>
             <InfoArea />
-            <EntryArea />
+            <EntryArea parentCallback={handleChange} />
             <CardArea />
         </div>
     );
