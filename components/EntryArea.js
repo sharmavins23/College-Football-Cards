@@ -6,7 +6,7 @@ const { Option } = Select;
 import styles from "../stylesheet.module.css";
 
 // Entry area container - middle section of application
-function EntryArea(props) {
+function EntryArea() {
     // Contains the area box for the user to select the conference they wish to load,
     // as well as the request call to the API to initially load up and populate the
     // selection box
@@ -37,7 +37,7 @@ function EntryArea(props) {
             })
             .then((response) => {
                 setData(response); // Save our data in the state
-                props.parentCallback(response); // Pass our data back to the parent
+                //this.props.parentCallback(response); // Pass our data back to the parent
                 setIsLoading(false);
             })
             .catch((error) => console.log(error)); // Error handling

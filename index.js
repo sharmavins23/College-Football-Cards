@@ -1,7 +1,6 @@
 // Imports
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import styles from "./stylesheet.module.css";
 // Components
 import InfoArea from "./components/InfoArea";
 import EntryArea from "./components/EntryArea";
@@ -11,20 +10,21 @@ import CardArea from "./components/CardArea";
 function App() {
     // Contains all individual components
 
-    // States
-    const [data, setData] = useState([]);
+    // Saving variable to passthrough (without re-render)
+    let choiceVal = "";
 
     // Callback function to change and save data state from child EntryArea
     let callback = (data) => {
-        setData(data);
+        //setData(data);
+        choiceVal = data;
     };
 
     // Render
     return (
         <div>
             <InfoArea />
-            <EntryArea parentCallback={this.callback} />
-            <CardArea data={this.state.data} />
+            <EntryArea />
+            <CardArea />
         </div>
     );
 }
