@@ -1,5 +1,8 @@
 // Imports
 import React, { useState, useEffect } from "react";
+import { Typography, Select } from "antd";
+const { Title, Text } = Typography;
+const { Option } = Select;
 import styles from "../stylesheet.module.css";
 
 // Entry area container - middle section of application
@@ -41,12 +44,35 @@ function EntryArea() {
 
     // Render
     return (
-        <div class={styles.main}>
-            <div class={styles.area + " " + styles.area_entry}>
-                <h2>Enter a College Football Conference</h2>
-                <p>
-                    Select a college football conference from the dropdown list.
-                </p>
+        <div>
+            {/* Left Div */}
+            <div>
+                {/* Title */}
+                <Title level={3}>Enter a football conference.</Title>
+                <Text>
+                    Select from the dropdown one of the supported College
+                    Football conferences.
+                </Text>
+            </div>
+
+            {/* Right Div */}
+            <div>
+                <Select
+                    filterOption={(input, option) =>
+                        option.children
+                            .toLowerCase()
+                            .indexOf(input.toLowerCase()) >= 0
+                    }
+                    placeholder="Choose conference"
+                    size="large"
+                    showSearch
+                    optionFilterProp="children"
+                    loading={isLoading}
+                    style={{ width: 400 }}>
+                    {data.map((obj) => (
+                        <Option value={obj.value}>{obj.text}</Option>
+                    ))}
+                </Select>
             </div>
         </div>
     );

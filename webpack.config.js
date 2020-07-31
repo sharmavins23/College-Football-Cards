@@ -25,5 +25,8 @@ module.exports = (env) => {
                 },
             ],
         },
+        devServer: {
+            port: 3000,
+        },
     };
 };

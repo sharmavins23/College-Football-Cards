@@ -13,9 +13,10 @@ function App() {
 
     // Render
     return (
-        <div class={styles.main}>
+        <div>
             <InfoArea />
             <EntryArea />
+            <CardArea />
         </div>
     );
 }

@@ -1,113 +1,34 @@
+/* Stylesheet formatting guide
+- Position
+- Display and Box Model
+- Color
+- Text
+- Other */
+
 /* ===== Website Stylesheets ================================================ */
 
-.main {
+.infoArea {
     /* Display and Box Model */
-    padding: 10px;
-    /* Text */
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.button {
-    /* Display and Box Model */
-    border: none;
-    border-radius: 10px;
-    display: inline-block;
-    padding: 10px;
-    /* Color */
-    background-color: transparent;
+    margin: 0 auto;
+    padding: 50px;
     /* Text */
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    /* Other */
-    cursor: pointer;
-    transition: all 0.5s;
 }
 
-.button span {
-    /* Position */
-    position: relative;
+.infoArea_textParagraph {
     /* Display and Box Model */
-    display: inline-block;
-    /* Other */
-    cursor: pointer;
-    transition: 0.5s;
+    padding-top: 10px;
+    padding-bottom: 30px;
 }
 
-.button span:after {
-    /* Position */
-    position: absolute;
-    right: -20px;
-    top: 0;
-    /* Display and Box Model */
-    opacity: 0;
-    /* Text */
-    content: "\00bb";
-    /* Other */
-    transition: 0.5s;
-}
-
-.button:hover span {
-    /* Display and Box Model */
-    padding-right: 25px;
-}
-
-.button:hover span:after {
-    /* Position */
-    right: 0;
-    /* Display and Box Model */
-    opacity: 1;
-}
-
-.area {
-    /* Display and box model */
-    border-radius: 10px;
-    padding: 25px;
-}
-
-.area h1 {
-    /* Text */
-    font-size: 4rem;
-    margin-bottom: 5px;
-}
-
-.area h2 {
-    /* Text */
-    font-size: 2rem;
-}
-
-.area p {
-    /* Text */
-    font-size: 1.25rem;
+.infoArea_background {
+    /* Color */
+    background-attachment: fixed;
+    background-image: url("https://wallpaperxyz.com/wp-content/uploads/Flat-Wallpapers-Full-HD-Free-Download-Wallpaperxyz.com-7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* ===== Info Area Styling ================================================== */
-
-.area_info {
-    /* Color */
-    background-image: linear-gradient(to bottom right, orchid, thistle);
-    color: white;
-}
-
-.button_info {
-    /* Display and Box Model */
-    width: 100px;
-    /* Color */
-    border: 2px solid white;
-    border-color: white;
-    color: white;
-}
-
-.button_info:hover {
-    /* Color */
-    background-color: white;
-    color: orchid;
-}
-
 /* ===== Entry Area Styling ================================================= */
-
-.area_entry {
-    background-color: lightgray;
-}
-
 /* ===== Card Area Styling ================================================== */
