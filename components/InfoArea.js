@@ -1,5 +1,10 @@
 // Imports
 import React from "react";
+import { Button, Typography } from "antd";
+const { Title, Text } = Typography;
+import { GithubOutlined } from "@ant-design/icons";
+// Styles
+import {} from "antd/dist/antd.css";
 import styles from "../stylesheet.module.css";
 
 // Info area container - topmost section of application
@@ -9,25 +14,38 @@ function InfoArea() {
 
     // Render
     return (
-        <div class={styles.main}>
-            <div class={styles.area + " " + styles.area_info}>
-                <h1>College Football Cards</h1>
-                <p>
-                    This is a small website that scrapes college football APIs
-                    and displays card information. The cards have helpful links
-                    detailing individual college specifications, as well as
-                    buttons to view more information about game schedules. You
-                    can check out other similar and interesting projects in my
-                    Github repositories.
-                </p>
-                <p>
-                    <a href="https://github.com/sharmavins23/College-Football-Cards">
-                        <button
-                            class={styles.button + " " + styles.button_info}>
-                            <span>Code </span>
-                        </button>
-                    </a>
-                </p>
+        <div class={styles.infoArea_background}>
+            <div class={styles.infoArea}>
+                {/* Title */}
+                <Title style={{ color: "white" }}>College Football Cards</Title>
+
+                {/* Text paragraph */}
+                <div class={styles.infoArea_textParagraph}>
+                    <Text style={{ color: "white" }}>
+                        This is a small website that scrapes college football
+                        APIs and displays card information.
+                    </Text>
+                    <br />
+                    <Text style={{ color: "white" }}>
+                        The cards have helpful links detailing individual
+                        college specifications, as well as buttons to view more
+                        information about game schedules.
+                    </Text>
+                    <br />
+                    <Text style={{ color: "white" }}>
+                        You can check out other interesting projects like this
+                        on my GitHub.
+                    </Text>
+                </div>
+
+                {/* Source Code Button */}
+                <Button
+                    href="https://github.com/sharmavins23/College-Football-Cards/"
+                    type="primary"
+                    icon={<GithubOutlined />}
+                    shape="round">
+                    Code
+                </Button>
             </div>
         </div>
     );
